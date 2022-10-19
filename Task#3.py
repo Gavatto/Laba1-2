@@ -18,16 +18,18 @@ class Product:
         return self._description
 
     @price.setter
-    def price(self, value):
-        if not isinstance(value, float):
+    def price(self, price):
+        if not isinstance(price, float):
             raise TypeError()
-        if value < 0.0:
+        if price < 0.0:
             raise ValueError()
-        self._price = value
+        self._price = price
 
     @size.setter
     def dimensions(self, size):
         if not isinstance(size, float):
+            raise Exception()
+        if size < 0.0:
             raise Exception()
         self._size = tuple(size)
 
