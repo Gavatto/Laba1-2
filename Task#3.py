@@ -19,7 +19,7 @@ class Product:
 
     @price.setter
     def price(self, value):
-        if not isinstance(value, int | float):
+        if not isinstance(value, float):
             raise TypeError()
         if value < 0.0:
             raise ValueError()
@@ -28,13 +28,13 @@ class Product:
     @size.setter
     def dimensions(self, size):
         if not isinstance(size, float):
-            raise Exception("...")
+            raise Exception()
         self._size = tuple(size)
 
     @description.setter
     def description(self, description):
         if not isinstance(description, str):
-            raise Exception("...")
+            raise Exception()
         self._description = description
 
     def __str__(self):
