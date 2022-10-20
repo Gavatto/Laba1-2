@@ -31,7 +31,7 @@ class Product:
             raise Exception()
         if size < 0.0:
             raise Exception()
-        self._size = tuple(size)
+        self._size = size
 
     @description.setter
     def description(self, description):
